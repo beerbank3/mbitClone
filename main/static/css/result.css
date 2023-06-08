@@ -1,0 +1,563 @@
+@font-face {
+    font-family: "GmarketSansBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NEXON Lv1 Gothic OTF";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background-color: #FAF1BE;
+    color: #000;
+    font-family: "NEXON Lv1 Gothic OTF";
+}
+
+button {
+    font-family: "NEXON Lv1 Gothic OTF";
+    font-size: 20px;
+    width: 400px;
+    height: 50px;
+    padding: 5px;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+.color {
+    background-color: #7F47DD;
+    color: #fff;
+}
+
+.color_second {
+    background-color: #5B2386;
+    color: #fff;
+}
+
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+	height: 100vh;
+}
+
+.loading_img {
+    background: url('../img/mbit_bg.png') no-repeat 0 0;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    animation: rotate 1.1s infinite linear;
+}
+
+#main_contents {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+#main_contents .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    padding-bottom: 50px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.result h3 {
+    font-size: 17px;
+    padding-bottom: 15px;
+}
+
+.result h1 {
+    font-size: 50px;
+    font-family: "GmarketSansBold";
+}
+
+.result_img {
+    width: 300px;
+    height: 324px;
+}
+
+.result_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.result_explains {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    line-height: 1.5;
+}
+
+.result_explains .explain {
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.result_explains .title {
+    font-family: "GmarketSansBold";
+    font-size: 20px;
+    text-align: center;
+    border-top: 3px solid #ea7e7c;
+    border-bottom: 3px solid #ea7e7c;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.result_explains ul {
+    padding: 0 20px;
+    list-style-type: disc;
+}
+
+.result_explains li {
+    padding-bottom: 15px;
+}
+
+.language_lists {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.language_lists li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.language_lists li .img_wrap {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.language_lists li .img_wrap img {
+    width: 100%;
+    height: auto;
+}
+
+.language_lists li h3 {
+    font-size: 15px;
+    font-family: "GmarketSansBold";
+    color: #ea7e7c
+}
+
+.explain p {
+    padding: 0 15px;
+    line-height: 1.5;
+}
+
+.lectures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid #ea7e7c;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+.lectures .title {
+    text-align: center;
+    width: 400px;
+    font-size: 30px;
+    font-family: "GmarketSansBold";
+    color: #ea7e7c;
+    position: relative;
+}
+
+.lectures .title:before, .lectures .title:after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: #ea7e7c;
+    position: absolute;
+}
+
+.lectures .title:before {
+    left: 0;
+    top: 50%;
+}
+
+.lectures .title:after{
+    right: 0;
+    top: 50%;
+}
+
+.lectures p {
+    padding: 50px 0;
+    line-height: 1.5;
+}
+
+.lectures ul {
+    width: 400px;
+}
+
+.lectures li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.lectures a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+}
+.lectures a:hover img {
+    transform: scale(1.05);
+}
+
+.lectures a:hover button {
+    text-decoration: underline;
+}
+
+.lectures li img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    transition: transform 0.5s;
+}
+
+.lectures li h3 {
+    font-family: "GmarketSansBold";
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 10px 20px;
+}
+
+.lectures li button {
+    background-color: #7F47DD;
+    color: #fff;
+}
+
+.share {
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #ea7e7c;
+}
+
+.share button {
+    margin-bottom: 30px;
+}
+
+.facebook_share {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.kakao_share {
+    background-color: #f1d900;
+}
+
+.buttons {
+    padding-bottom: 50px;
+}
+
+.buttons h3 {
+    padding-bottom: 20px;
+}
+
+.buttons button {
+    margin-bottom: 30px;
+}
+
+.weniv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weniv a {
+    width: 100px;
+}
+
+.weniv img{
+    width: 100%;
+    height: auto;
+}
+
+.weniv p {
+    padding-top: 20px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@media all and (min-width: 279px) and (max-width: 600px) {
+    .loading_img {
+        width: 100px;
+        height: 100px;
+    }
+
+    button {
+        font-size: 15px;
+        width: 250px;
+        height: 40px;
+    }
+
+    #main_contents {
+        margin-top: 50px;
+    }
+    
+    #main_contents .wrapper {
+        max-width: 300px;
+    }
+    
+    .result h3 {
+        font-size: 15px;
+        width: 300px;
+    }
+    
+    .result h1 {
+        font-size: 27px;
+    }
+
+    .result_img {
+        width: 200px;
+        height: 224px;
+    }
+    
+    .result_explains {
+        padding-bottom: 30px;
+    }
+    
+    .result_explains .explain {
+        width: 250px;
+    }
+    
+    .result_explains .title {
+        font-size: 16px;
+        padding: 10px 0;
+        margin-bottom: 15px;
+    }
+    
+    .result_explains ul {
+        padding: 0 15px;
+        font-size: 15px;
+    }
+    
+    .result_explains li {
+        padding-bottom: 15px;
+    }
+
+    .language_lists li .img_wrap {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .language_lists li h3 {
+        font-size: 10px;
+    }
+    
+    .explain p {
+        font-size: 10px;
+    }
+    
+    .lectures {
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+    }
+    
+    .lectures .title {
+        width: 250px;
+        font-size: 20px;
+    }
+    
+    .lectures .title:before, .lectures .title:after {
+        width: 70px;
+    }
+
+    .lectures p {
+        width: 200px;
+        padding: 30px 0;
+        font-size: 14px;
+    }
+    
+    .lectures ul {
+        width: 250px;
+    }
+
+    .lectures li h3 {
+        font-size: 10px;
+        padding: 0 10px 20px;
+    }
+
+    .share {
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+
+    .share button {
+        margin-bottom: 20px;
+    }
+    
+    .buttons {
+        padding-bottom: 30px;
+    }
+
+    .buttons h3 {
+        width: 250px;
+        font-size: 13px;
+    }
+    
+    .weniv a {
+        width: 70px;
+    }
+    
+    .weniv p {
+        width: 200px;
+    }
+}
+
+@media all and (min-width: 1920px) and (max-width: 2560px) {
+    button {
+        font-size: 30px;
+        width: 600px;
+        height: 70px;
+    }
+
+    #main_contents .wrapper {
+        max-width: 700px;
+    }
+    
+    .result h3 {
+        font-size: 20px;
+    }
+    
+    .result h1 {
+        font-size: 60px;
+    }
+    
+    .result_img {
+        width: 400px;
+        height: 424px;
+    }
+    
+    .result_explains .explain {
+        width: 600px;
+        margin-bottom: 50px;
+    }
+    
+    .result_explains .title {
+        font-size: 30px;
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+    
+    .result_explains ul {
+        padding: 0 30px;
+        font-size: 20px;
+    }
+    
+    .language_lists li .img_wrap {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+    
+    .language_lists li h3 {
+        font-size: 20px;
+    }
+    
+    .explain p {
+        padding: 0 30px;
+        font-size: 20px;
+    }
+    
+    .lectures {
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+    }
+    
+    .lectures .title {
+        width: 600px;
+        font-size: 45px;
+    }
+    
+    .lectures .title:before, .lectures .title:after {
+        width: 180px;
+    }
+    
+    .lectures p {
+        padding: 30px 0 50px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    .lectures ul {
+        width: 600px;
+    }
+    
+    .lectures li {
+        padding-bottom: 70px;
+    }
+    
+    .lectures li img {
+        padding-bottom: 30px;
+    }
+    
+    .lectures li h3 {
+        font-size: 25px;
+    }
+    
+    .buttons h3 {
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+    
+    .buttons button {
+        margin-bottom: 50px;
+    }
+    
+    .weniv a {
+        width: 150px;
+    }
+    
+    .weniv p {
+        padding-top: 20px;
+        font-size: 15px;
+    }
+}

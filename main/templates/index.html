@@ -1,15 +1,51 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>나의 개발 유형찾기</title>
 </head>
-<body>
-    <h1>hello world</h1>
-    <p>hello world</p>
-    
-    {% for developer in developers %}
-        <p>{{ developer.name }} : {{ developer.count }}</p>
-    {% endfor %}
+<body> 
+    <section id="main_contents">
+        <div class="wrapper">
+            <div class="title">
+                <h3 class="main_title">나의 MBIT</h3>
+                <h3 class="sub_title">My Best IT personalities</h3>
+            </div>
+            <div class="explain">
+                <p>
+                    "코딩 공부를 시작하려는데...<br>
+                    도대체 뭐 부터 공부해야 할까?"<br><br>
+                    나의 개발 유형을 테스트 해보자!
+                </p>
+            </div>
+            <div class="buttons">
+                <a href="/form/">
+                    <button class="start" type="button">시작하기</button>
+                </a>
+                <a href="http://www.paullab.co.kr/curriculum.html" target="_blank">
+                    <button class="lecture">강의 보러가기</button>
+                </a>
+            </div>
+            <div class="result_data">
+                <div class="data_wrap">
+                    <ul>
+                        {% for developer in developers %}
+                            <li>{{ developer.name }} : {{ developer.count }}명</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="weniv">
+                <a href="http://www.paullab.co.kr">
+                    <img src="{% static 'image/weniv_text_logo.png' %}" alt="weniv">
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
